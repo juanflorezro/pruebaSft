@@ -1,0 +1,240 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f9;
+    margin: 0;
+    padding: 0;
+}
+.container {
+    width: 90%;
+    margin: 20px auto;
+    background-color: white;
+    padding: 20px;
+    padding-bottom: 90px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    flex-direction: column;
+}
+.headert {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+}
+.professional-title {
+    font-family: 'Merriweather', serif;
+    font-size: 280%;
+    padding: 10px;
+    font-weight: 700;
+    color: #2C3E50;
+    letter-spacing: 2px;
+    border-bottom: 1px solid;
+    width: 99%;
+}
+.professional-title:hover {
+    color: #3498DB;
+    transition: color 0.3s ease-in-out;
+}
+.search-bar-container {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+.search-bart {
+    width: 60%;
+    padding: 15px 15px 15px 40px; /* Espacio a la izquierda para la lupa */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+    margin-left: 3%;
+}
+.search-bar-container:before {
+    content: '🔍';
+    position: absolute;
+    left: 5%; /* Ajusta la posición del ícono */
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 16px;
+    color: #ccc;
+}
+.filters {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    gap: 10px;
+    align-items: flex-end; /* Alinea todos los elementos al final */
+}
+.filter-input-container {
+    display: flex;
+    flex-direction: column;
+    align-items: left; /* Alinea los elementos a la izquierda */
+}
+.filter-input-container label {
+    margin-bottom: 5px; /* Espacio entre el label y el input */
+    font-weight: bold; /* Negrita para el texto */
+    text-align: left; /* Alinea el texto del label a la izquierda */
+}
+.filter-input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    width: 180px; /* Establece un ancho fijo para los inputs */
+}
+.date-filter {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.date-input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 180px; /* Establece un ancho fijo igual que los otros inputs */
+}
+.search-buttont {
+    padding: 10px;
+    background-color: #007bff; /* Color de fondo más profesional */
+    color: white; /* Texto en blanco para mejor contraste */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centra el texto y el ícono */
+    gap: 5px;
+    height: 40px; /* Altura fija */
+    width: 80px; /* Ancho fijo */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Transición suave */
+}
+.search-buttont:before {
+    content: '🔍';
+}
+.search-buttont:hover {
+    background-color: #0056b3; /* Color de fondo al pasar el cursor */
+    transform: translateY(-2px); /* Efecto de elevación */
+}
+.search-buttont:active {
+    background-color: #004494; /* Color de fondo al hacer clic */
+    transform: translateY(0); /* Elimina el efecto de elevación */
+}
+.download-button-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; /* Alinea el botón a la derecha */
+}
+.download-button {
+    margin: 20px 0;
+    padding: 10px 40px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.tasks-table {
+    border-collapse: collapse;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.tasks-table th, .tasks-table td {
+    padding: 15px;
+    text-align: center; /* Centra el texto en todas las celdas */
+    border-bottom: 1px solid #ccc;
+     /* Evita que el contenido se rompa en nuevas líneas */
+}
+.tasks-table th {
+    background-color: #1e5cda;
+    color: white;
+}
+.status {
+    padding: 5px 10px;
+    border-radius: 5px;
+    white-space: nowrap; /* Evita que el texto se rompa en líneas nuevas */
+    text-overflow: ellipsis; /* Muestra puntos suspensivos si el texto es demasiado largo */
+    overflow: hidden; /* Oculta el texto que desborda el contenedor */
+    min-width: 80px; /* Ajusta el ancho mínimo para que sea pequeño pero legible */
+    max-width: 150px; /* Puedes ajustar el ancho máximo según sea necesario */
+    text-align: center; /* Opcional: centra el texto dentro del elemento */
+}
+.in-progress {
+    background-color: #e3f7ff;
+    color: #00aaff;
+}
+.responsable-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+.options {
+    width: 30px;
+    height: 30px;
+    background: url('options-icon.png') no-repeat center center;
+    background-size: contain;
+    cursor: pointer;
+}
+.dots {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #ccc;
+    display: inline-block;
+}
+.options {
+    position: relative; /* Posiciona el menú relativo al contenedor */
+}
+.options-btn {
+    background: none;
+    border: none;
+    font-size: 18px; /* Tamaño de la flecha */
+    cursor: pointer;
+    outline: none;
+    color: #007bff; /* Color de la flecha */
+    transition: transform 0.3s; /* Transición suave para el cambio de dirección */
+}
+.options-btn::after {
+    content: '\25B6'; /* Flecha hacia la derecha */
+    font-size: 18px; /* Tamaño del ícono */
+    display: inline-block;
+    transition: transform 0.3s; /* Transición suave para el cambio de dirección */
+}
+.options-menu {
+    display: none; /* Oculta el menú por defecto */
+    position: absolute;
+    top: 100%;
+    left: 0; /* Alinea el menú a la izquierda del botón */
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px; /* Radio de esquina más grande para bordes redondeados */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* Agrega sombra sutil */
+    z-index: 1000; /* Asegura que el menú aparezca sobre otros elementos */
+    width: 150px; /* Ajusta el ancho del menú según sea necesario */
+    overflow: hidden; /* Oculta el desbordamiento de contenido */
+}
+.options-menu a {
+    display: block;
+    padding: 12px 16px; /* Ajusta el relleno para más espacio */
+    text-decoration: none;
+    color: #333; /* Color del texto */
+    border-bottom: 1px solid #ddd; /* Borde inferior sutil */
+}
+.options-menu a:hover {
+    background-color: #f8f9fa; /* Cambia el fondo al pasar el cursor */
+    color: #007bff; /* Cambia el color del texto al pasar el cursor */
+}
+.options-menu a:last-child {
+    border-bottom: none; /* Elimina el borde en el último ítem */
+}
+/* Mostrar el menú y cambiar la dirección de la flecha al hacer clic */
+.options.show .options-btn::after {
+    content: '\25BC'; /* Flecha hacia abajo */
+}
+.options.show .options-menu {
+    display: block; /* Muestra el menú */
+}
