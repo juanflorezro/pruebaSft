@@ -10,7 +10,7 @@ const ModalAddActuacion = ({ isOpen, onClose, onSubmit }) => {
     return (
         <div className="modal-overlay">
             <div className="modal-content">
-                <h2 className="modal-title">Cuaderno</h2>
+                <h2 className="modal-title">Agregar Actuación</h2>
                 <form className="modal-form" onSubmit={onSubmit}>
                     <div className="form-group">
                         <div className="cuaderno-wrapper">
@@ -19,7 +19,7 @@ const ModalAddActuacion = ({ isOpen, onClose, onSubmit }) => {
                                 <option value="cuaderno1">Cuaderno 1</option>
                                 <option value="cuaderno2">Cuaderno 2</option>
                             </select>
-                            <button className="btn-add-cuaderno">Agregar Cuaderno</button>
+                            <button type="button" className="btn-add-cuaderno">Agregar Cuaderno</button>
                         </div>
                     </div>
                     <div className="form-group">
