@@ -2,6 +2,7 @@ import { useState } from 'react';
 import './css/pagesProcesos.css'
 import Actuaciones from './pagesProcesos/actuaciones';
 import { Caso } from './pagesProcesos/caso';
+import Tareas from './pagesProcesos/tareas'
 export const PagesProcesos = ({ setVerPagesProcesos }) => {
     const [activeTab, setActiveTab] = useState('Ver Caso');
     const renderActiveComponent = () => {
@@ -11,7 +12,7 @@ export const PagesProcesos = ({ setVerPagesProcesos }) => {
             case 'Actuaciones':
                 return <Actuaciones />;
             case 'Tareas':
-                return <Component3 />;
+                return <Tareas />;
             default:
                 return null;
         }
